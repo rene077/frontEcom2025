@@ -3,15 +3,26 @@ import { CommonModule } from '@angular/common';
 
 import { AdminRoutingModule } from './admin-routing.module';
 import { AdminComponent } from './admin.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { PostCategoryComponent } from './components/post-category/post-category.component';
+import { FormGroup, FormGroupName, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { DemoAngularMaterailModule } from '../DemoAngularMaterialModule';
 
 
 @NgModule({
   declarations: [
-    AdminComponent
+    AdminComponent,
+    DashboardComponent,
+    PostCategoryComponent
   ],
   imports: [
     CommonModule,
-    AdminRoutingModule
+    AdminRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    DemoAngularMaterailModule
   ]
 })
 export class AdminModule { }

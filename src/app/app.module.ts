@@ -27,7 +27,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    BrowserAnimationsModule, // Asegúrate de que esté aquí
+    BrowserAnimationsModule, // Asegúrate de agregar este modulo sino te lo ofrece al crear el proyecto
   ],
   providers: [],
   bootstrap: [AppComponent]
