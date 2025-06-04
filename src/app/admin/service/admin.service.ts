@@ -19,6 +19,36 @@ export class AdminService {
     })
   }
 
+  getAllCategories(): Observable<any>{
+    return this.http.get(BASIC_URL + 'api/admin', {
+      headers: this.createAuthorizationHeader(),
+    })
+  }
+
+  addProduct(producDto:any): Observable<any>{
+    return this.http.post(BASIC_URL + 'api/admin/product', producDto, {
+      headers: this.createAuthorizationHeader(),
+    })
+  }
+
+  getAllProducts(): Observable<any>{
+    return this.http.get(BASIC_URL + 'api/admin/products', {
+      headers: this.createAuthorizationHeader(),
+    })
+  }
+
+  getAllProductsByName(name:any): Observable<any>{    //no olvidar poner comillas invertidas en url (`), sino no funka 
+    return this.http.get(BASIC_URL + `api/admin/search/${name}`, {
+      headers: this.createAuthorizationHeader(),
+    })
+  }
+
+  deleteProduct(productId:any): Observable<any>{
+    return this.http.delete(BASIC_URL + `api/admin/product/${productId}`, {
+      headers: this.createAuthorizationHeader(),
+    })
+  }
+
   private createAuthorizationHeader(): HttpHeaders{
     return new HttpHeaders().set(
       'Authorization', 'Bearer ' + UserStorageService.getToken()

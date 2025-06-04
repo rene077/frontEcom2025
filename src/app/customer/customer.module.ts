@@ -7,16 +7,22 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DemoAngularMaterailModule } from '../DemoAngularMaterialModule';
+import { CartComponent } from './components/cart/cart.component';
 
 
 @NgModule({
   declarations: [
     CustomerComponent,
-    DashboardComponent
+    DashboardComponent,
+    CartComponent
   ],
   imports: [
     CommonModule,
     CustomerRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    DemoAngularMaterailModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
