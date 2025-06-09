@@ -9,6 +9,8 @@ import { FormGroup, FormGroupName, FormsModule, ReactiveFormsModule } from '@ang
 import { HttpClientModule } from '@angular/common/http';
 import { DemoAngularMaterailModule } from '../DemoAngularMaterialModule';
 import { PostProductComponent } from './components/post-product/post-product.component';
+import { PostCouponComponent } from './components/post-coupon/post-coupon.component';
+import { CouponsComponent } from './components/coupons/coupons.component';
 
 
 @NgModule({
@@ -16,7 +18,9 @@ import { PostProductComponent } from './components/post-product/post-product.com
     AdminComponent,
     DashboardComponent,
     PostCategoryComponent,
-    PostProductComponent
+    PostProductComponent,
+    PostCouponComponent,
+    CouponsComponent
   ],
   imports: [
     CommonModule,

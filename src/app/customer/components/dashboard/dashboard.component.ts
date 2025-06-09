@@ -49,7 +49,7 @@ export class DashboardComponent {
     })
   }
 
-  addToCart(id: any) {
+  addToCart(id:any) { 
     this.customerService.addToCart(id).subscribe({
       next: (res) => { // Esto se ejecuta si la petición es exitosa (código 2xx)
         // Puedes verificar el mensaje del backend si lo envías, o simplemente mostrar un mensaje genérico
